@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button default-href="#"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ nota.label }}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="salvarNota()">Salvar</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item class="full-input">
+    <ion-textarea 
+      style="height: 90vh; overflow-y: scroll;" 
+      [(ngModel)]="nota.texto" 
+      placeholder="Escreva sua nota aqui...">
+    </ion-textarea>
+  </ion-item>
+</ion-content>

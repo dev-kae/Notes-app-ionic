@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Notas</ion-title>
+    <!-- <ion-searchbar placeholder="Pesquisar"></ion-searchbar> -->
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let nota of notas" (click)="abrirEditorDeNota(nota)">
+      <ion-label>{{ nota.label }}</ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-popover [isOpen]="isPopoverOpen">
+    <ng-template>
+      <!-- <app-popover-content></app-popover-content> -->
+    </ng-template>
+  </ion-popover>
+
+  <div style="position: absolute; width: 100%; bottom: 0;">
+    <ion-item class="bottom-item">
+      <ion-input [(ngModel)]="novaNota" labelPlacement="stacked" placeholder="Adicione o nome da nota"></ion-input>
+      <ion-fab-button (click)="adicionarNota()" class="add_icon">
+        <ion-icon name="add"></ion-icon>
+      </ion-fab-button>
+    </ion-item>
+  </div>
+</ion-content>

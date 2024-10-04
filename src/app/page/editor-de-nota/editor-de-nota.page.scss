@@ -1,0 +1,9 @@
+.full-input {
+    height: 100vh; /* Define a altura do item como a altura total da viewport */
+  }
+  
+  .full-input ion-input {
+    width: 100%; /* O input ocupa 100% da largura */
+    height: 100%; /* O input ocupa 100% da altura */
+    font-size: 24px; /* Ajuste o tamanho da fonte, se necessário */
+  }
